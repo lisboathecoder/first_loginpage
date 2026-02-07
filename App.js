@@ -1,16 +1,10 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TextInput,
-  TouchableOpacity,
-  StatusBar
-} from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity,} from "react-native";
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar style="auto"/>
+      <StatusBar style="auto" />
       <View style={styles.icon}>
         <Image
           source={require("./assets/cap.svg")}
@@ -25,23 +19,32 @@ export default function App() {
 
       <View style={styles.inputContainer}>
         <Text style={styles.label}>E-mail</Text>
-        
+
         <View style={styles.inputWrapper}>
-          <Image source={require("./assets/email.svg")} style={styles.inputIcon} />
-          <TextInput 
-            style={[styles.inputWithIcon]} 
-            placeholder="seu@email.com" 
+          <Image
+            source={require("./assets/email.svg")}
+            style={styles.inputIcon}
+          />
+          <TextInput
+            style={[styles.inputWithIcon]}
+            placeholder="seu@email.com"
           />
         </View>
         <Text style={styles.label}>Senha</Text>
         <View style={styles.inputWrapper}>
-          <Image source={require("./assets/lock.svg")} style={styles.inputIcon} />
-          <TextInput 
-            style={[styles.inputWithIcon]} 
-            placeholder="********" 
-            secureTextEntry 
+          <Image
+            source={require("./assets/lock.svg")}
+            style={styles.inputIcon}
           />
-          <Image source={require("./assets/eye.svg")} style={styles.inputIcon} />
+          <TextInput
+            style={[styles.inputWithIcon]}
+            placeholder="********"
+            secureTextEntry
+          />
+          <Image
+            source={require("./assets/eye.svg")}
+            style={styles.inputIcon}
+          />
         </View>
 
         <TouchableOpacity>
@@ -49,12 +52,13 @@ export default function App() {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Entrar
-             <Image
-            source={require("./assets/arrow-right.svg")}
-            style={styles.buttonIcon}
-          /></Text> 
-      
+          <Text style={styles.buttonText}>
+            Entrar
+            <Image
+              source={require("./assets/arrow-right.svg")}
+              style={styles.buttonIcon}
+            />
+          </Text>
         </TouchableOpacity>
         <View>
           <View style={styles.dividerContainer}>
@@ -147,7 +151,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     borderRadius: 8,
     padding: 12,
-    marginBottom: 15
+    marginBottom: 15,
   },
 
   forgotPassword: {
@@ -225,16 +229,16 @@ const styles = StyleSheet.create({
     flex: 1,
     color: "#333",
     opacity: 0.4,
-    fontWeight: "bold"
-    },
+    fontWeight: "bold",
+  },
 
-    buttonIcon: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      width: 20,
-      height: 20,
-      marginLeft: 10,
-      marginBottom: -4,
-    },
+  buttonIcon: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 20,
+    height: 20,
+    marginLeft: 10,
+    marginBottom: -4,
+  },
 });
