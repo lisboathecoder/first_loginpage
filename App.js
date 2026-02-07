@@ -49,7 +49,12 @@ export default function App() {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Entrar →</Text>
+          <Text style={styles.buttonText}>Entrar
+             <Image
+            source={require("./assets/arrow-right.svg")}
+            style={styles.buttonIcon}
+          /></Text> 
+      
         </TouchableOpacity>
         <View>
           <View style={styles.dividerContainer}>
@@ -221,5 +226,15 @@ const styles = StyleSheet.create({
     color: "#333",
     opacity: 0.4,
     fontWeight: "bold"
+    },
+
+    buttonIcon: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      width: 20,
+      height: 20,
+      marginLeft: 10,
+      marginBottom: -4,
     },
 });
