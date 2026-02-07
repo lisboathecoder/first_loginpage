@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
 
   icon: {
-    shadowColor: "#000",
+    shadowColor: "#7c3aed",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.25,
     shadowRadius: 5,
