@@ -29,14 +29,15 @@ export default function App() {
         <View style={styles.inputWrapper}>
           <Image source={require("./assets/email.svg")} style={styles.inputIcon} />
           <TextInput 
-            style={[styles.input, styles.inputWithIcon]} 
+            style={[styles.inputWithIcon]} 
             placeholder="seu@email.com" 
           />
         </View>
+        <Text style={styles.label}>Senha</Text>
         <View style={styles.inputWrapper}>
           <Image source={require("./assets/lock.svg")} style={styles.inputIcon} />
           <TextInput 
-            style={[styles.input, styles.inputWithIcon]} 
+            style={[styles.inputWithIcon]} 
             placeholder="********" 
             secureTextEntry 
           />
@@ -141,9 +142,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     borderRadius: 8,
     padding: 12,
-    marginBottom: 15,
-    fontSize: 16,
-    fontWeight: "bold",
+    marginBottom: 15
   },
 
   forgotPassword: {
@@ -219,5 +218,8 @@ const styles = StyleSheet.create({
   },
   inputWithIcon: {
     flex: 1,
+    color: "#333",
+    opacity: 0.4,
+    fontWeight: "bold"
     },
 });
