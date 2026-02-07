@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     flex: 0.4,
     justifyContent: "flex-start",
     alignItems: "flex-start",
-    marginBottom: "auto",
+    marginBottom: "25%",
   },
 
   title: {
