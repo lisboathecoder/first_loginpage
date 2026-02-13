@@ -1,19 +1,25 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity,} from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.icon}>
-        <Image
-          source={require("./assets/cap.svg")}
-          style={{ width: 50, height: 50 }}
-        />
+    <FontAwesome5 name="graduation-cap" size={40} color="#7c3aed" />
       </View>
 
       <View style={styles.text}>
-        <Text style={styles.title}>Bem-vindo de volta</Text>
+        <Text style={styles.title}>Bem-vindo de volta!</Text>
         <Text style={styles.subtitle}>Acesse sua conta do SENAI</Text>
       </View>
 
@@ -21,30 +27,21 @@ export default function App() {
         <Text style={styles.label}>E-mail</Text>
 
         <View style={styles.inputWrapper}>
-          <Image
-            source={require("./assets/email.svg")}
-            style={styles.inputIcon}
-          />
+        <MaterialIcons name="mail" size={20} color="grey" />
           <TextInput
             style={[styles.inputWithIcon]}
-            placeholder="seu@email.com"
+            placeholder=" seu@email.com"
           />
         </View>
         <Text style={styles.label}>Senha</Text>
         <View style={styles.inputWrapper}>
-          <Image
-            source={require("./assets/lock.svg")}
-            style={styles.inputIcon}
-          />
+          <FontAwesome5 name="lock" size={20} color="grey" />  
           <TextInput
             style={[styles.inputWithIcon]}
-            placeholder="********"
+            placeholder="   ********"
             secureTextEntry
           />
-          <Image
-            source={require("./assets/eye.svg")}
-            style={styles.inputIcon}
-          />
+          <FontAwesome5 name="eye" size={20} color="grey" />
         </View>
 
         <TouchableOpacity>
@@ -67,18 +64,9 @@ export default function App() {
             <View style={styles.dividerLine} />
           </View>
           <View style={styles.socialIcons}>
-            <Image
-              source={require("./assets/facebook.svg")}
-              style={styles.icons}
-            />
-            <Image
-              source={require("./assets/google.svg")}
-              style={styles.icons}
-            />
-            <Image
-              source={require("./assets/github.svg")}
-              style={styles.icons}
-            />
+            <FontAwesome5 name="facebook" size={45} color="blue" />
+            <FontAwesome5 name="google-plus-g" size={45} color="red" />
+            <FontAwesome5 name="github" size={45} color="black" />
           </View>
         </View>
         <Text style={styles.signupText}>
@@ -93,31 +81,34 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#ffffff",
-    alignItems: "flex-start",
+    alignItems: "center",
     justifyContent: "center",
-    padding: 20,
+    padding: "1.5rem",
   },
 
   icon: {
+    padding: "1rem",
+    justifyContent: "center",
+    margin: "auto",
+    marginBottom: "2rem",
     shadowColor: "#7c3aed",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.25,
     shadowRadius: 5,
     borderRadius: 20,
-    padding: 20,
-    marginBottom: "15%",
-    marginLeft: "40%",
   },
 
   text: {
-    flex: 0.4,
+    width: "100%",
+    maxWidth: 500,
     justifyContent: "flex-start",
     alignItems: "flex-start",
-    marginBottom: "25%",
+    marginBottom: "auto",
+    flex: 0.3,
   },
 
   title: {
-    fontSize: 37,
+    fontSize: "2rem",
     fontWeight: "bold",
     marginBottom: 5,
   },
@@ -129,6 +120,7 @@ const styles = StyleSheet.create({
   },
 
   inputContainer: {
+    flex: 1,
     width: "100%",
     maxWidth: 400,
   },
